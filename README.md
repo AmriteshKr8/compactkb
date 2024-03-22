@@ -13,6 +13,7 @@ A 74 key mechanical keyboard that doesnt need layering to access all keys.
 <li>Use the test plate as holder for the mcu after you see that your switches/keys fit well and have ample spacing.<br></li>
 </ul>
 <h2>Find 3d models at:</h2><br>
+https://www.printables.com/model/814626-compactkb74<br>
 
 <h2>Layout:</h2><br>
 <img src = "https://github.com/AmriteshKr8/compactkb/assets/65892477/854fbfb3-89ef-49d6-b33b-8c362bdcd952"><br>
