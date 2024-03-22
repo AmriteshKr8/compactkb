@@ -17,5 +17,5 @@ Use the test plate as holder for the mcu after you see that your switches/keys f
 <h2>Layout:</h2><br>
 <img src = "https://github.com/AmriteshKr8/compactkb/assets/65892477/854fbfb3-89ef-49d6-b33b-8c362bdcd952"><br>
 
-<h2>feel free to the layout with this reference:</h2><br>
+<h2>feel free to edit the layout with this reference:</h2><br>
 https://docs.circuitpython.org/projects/hid/en/latest/api.html#adafruit-hid-keycode-keycode<br>
