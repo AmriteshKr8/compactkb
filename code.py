@@ -1,16 +1,18 @@
 import board
 import keypad
-import time
 from adafruit_hid.keyboard import Keyboard
 import usb_hid
 from adafruit_hid.keycode import Keycode
 import digitalio
 
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
 k = keypad.KeyMatrix(
     row_pins=(board.GP15, board.GP16, board.GP17, board.GP18, board.GP19, board.GP20),
     column_pins=(board.GP0, board.GP1, board.GP2, board.GP3, board.GP4, board.GP5, board.GP6, board.GP7, board.GP8, board.GP9, board.GP10, board.GP11, board.GP12),
 )
-kbd = Keyboard(usb_hid.devices)
+kbd = Keyboard(usb_hid.devices,30)
 
 layout = [
     Keycode.ESCAPE,Keycode.F1,Keycode.F2,Keycode.F3,Keycode.F4,Keycode.F5,Keycode.F6,Keycode.F7,Keycode.F8,Keycode.F9,Keycode.F10,Keycode.F11,Keycode.F12,
@@ -28,4 +30,7 @@ while True:
                 kbd.press(layout[key_event.key_number])
             else:
                 kbd.release(layout[key_event.key_number])
-
+    if (kbd.led_on(Keyboard.LED_CAPS_LOCK) == 1):
+        led.value = True
+    elif (kbd.led_on(Keyboard.LED_CAPS_LOCK) == 0):
+        led.value = False
